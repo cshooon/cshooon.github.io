@@ -3,6 +3,7 @@ title: XAI Grad-CAM
 date: 2024-11-29 19:10:20 +09:00
 categories: ['AI']
 tags: ['XAI', 'Image', 'Grad-CAM']
+use_math: true
 ---
 
 # Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization

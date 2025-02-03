@@ -3,6 +3,7 @@ title: Long-Tail Loss Function Approach
 date: 2025-01-02 15:13:35 +09:00
 categories: ['AI']
 tags: ['ICD code', 'Long-Tail', 'Fine-Tuning']
+use_math: true
 ---
 
 # Long-Tail Learning with Foundation Model: Heavy Fine-Tuning Hurts
