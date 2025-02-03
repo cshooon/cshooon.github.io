@@ -1,5 +1,5 @@
 # The Site Configuration
-# Conversion
+# Math equation
 markdown: kramdown
 highlighter: rouge
 lsi: false
