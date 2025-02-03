@@ -49,11 +49,11 @@ Transformer Architecture는 computer vision and natural language processing task
 
 CLIP compares the **cosine similarity** between the image and each of the class prompts
 
-[/
+/[
 \begin{equation}
 y_{\text{pred}} = \arg\max_{k \in K} \frac{\mathbf{f}_I^\top \mathbf{f}_T^k}{\|\mathbf{f}_I\|_2 \|\mathbf{f}_T^k\|_2}.
 \end{equation}
-/]
+]/
 
 ${f}_I$: Image Feature
 
@@ -109,17 +109,17 @@ $P_s(x \mid y=j)$ 에서 tail class의 경우 빈도가 적어 작게 추정됨.
 
 $P_t(x \mid y=j)$ 에서 source distribution보다 tail class 빈도가 높음. 크게 추정됨.
 
-[/
+/[
 \zeta_{s-t}(j) = \frac{P_s(y = k \mid x)}{P_t(y = k \mid x)}
-/]
+]/
 
 
-[/
+/[
 \begin{align}
 L(x, y = j) &= -\log P_s(y = j \mid x) \\
 &= -\log \frac{\exp(z_j + \log P_s(y = j) + \log \zeta_{s-t}(j))}{\sum_{k \in K} \exp(z_k + \log P_s(y = k) + \log \zeta_{s-t}(k))},
 \end{align}
-/]
+]/
 
 Loss underestimated. tail class를 예측할 때 penalty를 받아, head class라고 추정하기 쉬움.
 
@@ -142,9 +142,9 @@ $W \in \mathbb{R}^{d_1 \times d_2}$, a specified proportion $\alpha$, a sparse 0
 
 used to **control the optimized parameters**
 
-[/
+/[
 XW \rightarrow X(W \odot M) + X(W \odot (1 − M))
-/]
+]/
 
 element-wise product를 수행함. mask M이 1이면 학습을 진행하고 0이면 학습을 진행하지 않음.
 
@@ -168,9 +168,9 @@ Linear classifier $z_j = w_j^\top f + b \cdot \|w_j\|$ , j가 tail class인 경�
 
 **LA loss**
 
-[/
+/[
 L_{\text{LA}}(x, y = j) = -\log \frac{\exp(z_j + \log P(y = j))}{\sum_{k \in K} \exp(z_k + \log P(y = k))}
-/]
+]/
 
 $y = j$ represents the ground-truth label of $x$ and $z_j$ is the predicted logit.
 
