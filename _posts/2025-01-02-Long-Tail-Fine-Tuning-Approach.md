@@ -51,7 +51,7 @@ CLIP compares the **cosine similarity** between the image and each of the class 
 
 [/
 \begin{equation}
-    y_{\text{pred}} = \arg\max_{k \in [K]} \frac{\mathbf{f}_I^\top \mathbf{f}_T^k}{\|\mathbf{f}_I\|_2 \|\mathbf{f}_T^k\|_2}.
+y_{\text{pred}} = \arg\max_{k \in K} \frac{\mathbf{f}_I^\top \mathbf{f}_T^k}{\|\mathbf{f}_I\|_2 \|\mathbf{f}_T^k\|_2}.
 \end{equation}
 /]
 
@@ -116,8 +116,8 @@ $P_t(x \mid y=j)$ 에서 source distribution보다 tail class 빈도가 높음. 
 
 [/
 \begin{align}
-    L(x, y = j) &= -\log P_s(y = j \mid x) \\
-    &= -\log \frac{\exp(z_j + \log P_s(y = j) + \log \zeta_{s-t}(j))}{\sum_{k \in [K]} \exp(z_k + \log P_s(y = k) + \log \zeta_{s-t}(k))},
+L(x, y = j) &= -\log P_s(y = j \mid x) \\
+&= -\log \frac{\exp(z_j + \log P_s(y = j) + \log \zeta_{s-t}(j))}{\sum_{k \in K} \exp(z_k + \log P_s(y = k) + \log \zeta_{s-t}(k))},
 \end{align}
 /]
 
@@ -169,7 +169,7 @@ Linear classifier $z_j = w_j^\top f + b \cdot \|w_j\|$ , j가 tail class인 경�
 **LA loss**
 
 [/
-L_{\text{LA}}(x, y = j) = -\log \frac{\exp(z_j + \log P(y = j))}{\sum_{k \in [K]} \exp(z_k + \log P(y = k))}
+L_{\text{LA}}(x, y = j) = -\log \frac{\exp(z_j + \log P(y = j))}{\sum_{k \in K} \exp(z_k + \log P(y = k))}
 /]
 
 $y = j$ represents the ground-truth label of $x$ and $z_j$ is the predicted logit.
