@@ -38,7 +38,7 @@ image with external datasets such as ImageNet-21K.
 3. LIFT: **Low complexity** (fewer Learnable Params) and **accurate** method.
 4. LIFT outperforms the state-of-the-art methods with a **lower computational cost**.
 
-![Figure 1.](/assets/posts_images/accuracy.png)
+![Figure 1.](/assets/posts_images/ai-ft/accuracy.png)
 Figure 1. 
 원 크기는 epoch 수를 의미. 
 
@@ -60,7 +60,7 @@ ${f}_T^k$: Texture Feature, k candidate classes
 
 Zero-shot CLIP은 학습을 진행하지 않고, Inference를 수행함. Zero-shot CLIP은 conventional method 보다 대체로 성능이 좋음. backbone을 freeze하고 추가로 classifier를 학습해 성능이 향상됨. 그렇지만 세 가지 데이터셋 모두에서 head class에 비해 tail class의 성능이 많이 떨어짐.
 
-![Figure 2.](/assets/posts_images/foundation.png)
+![Figure 2.](/assets/posts_images/ai-ft/foundation.png)
 
 ## 3. Heavy Fine-Tuning Hurts
 
@@ -72,7 +72,7 @@ Zero-shot: 학습 X
 Classifier Fine-Tuning: classifier만 학습.
 Full Fine-Tuning: classfier + foundation model까지 전부 학습.
 
-![Figure 3.](/assets/posts_images/fine-tuning.png)
+![Figure 3.](/assets/posts_images/ai-ft/fine-tuning.png)
 
 Figure 3. 
 Left: inter-class feature similarities Right: intra-class distributions from tail class
@@ -150,7 +150,7 @@ $X(W \odot (1 − M))$ 항은 detached gradient(freeze)로 학습을 진행하�
 
 $\alpha$가 작을 때(e.g. 0.1%) 성능 향상이 컸음. $\alpha$가 커지면 성능이 하락함.
 
-![Figure 5.](/assets/posts_images/lightweight.png)
+![Figure 5.](/assets/posts_images/ai-ft/lightweight.png)
 
 the optimized parameters are selected **arbitrary** → remarkable improvements.
 
