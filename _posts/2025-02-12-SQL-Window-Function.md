@@ -18,7 +18,7 @@ SQL에서 데이터를 다룰 때, 단순한 그룹화와 집계 함수만으로
 ```sql
 SELECT WINDOW_FUNCTION(ARGUMENTS)
   OVER (PARTITION BY COLUMN ORDER BY WINDOWING)
-FROM 테이블명;
+FROM TableName;
 ```
 #### 구조 설명
 | 요소 | 설명 |
@@ -65,6 +65,7 @@ FROM 테이블명;
 - `PERCENT_RANK()`: 백분율 순위를 계산한다.
 - `NTILE(N)`: 데이터를 N개 그룹으로 나눈다.
 - `RATIO_TO_REPORT()`: 값이 전체 합에서 차지하는 비율을 계산한다.
+
 
 > 윈도우 함수는 SQL에서 데이터를 유연하고 효율적으로 다룰 수 있도록 도와주는 중요한 기능입니다. 
 > 개별 행을 유지하면서도 순위 계산, 누적 합, 비율 분석 등을 수행할 수 있어 실무뿐만 아니라 코딩 테스트에서도 유용하게 활용됩니다. 
